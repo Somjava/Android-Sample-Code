@@ -1,0 +1,319 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"></include>
+
+
+    <ScrollView
+
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/nav_header_container"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_below="@+id/toolbar"
+                android:background="@drawable/bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imgUserDrawer"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/txtNameDetails"
+                    style="@style/grey_popup_normal_14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/drawerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/txtQualification"
+                        style="@style/grey_normal_14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:drawableLeft="@drawable/doctor_detail"
+                        android:drawablePadding="10dp"
+                        android:padding="15dp"
+                        android:text="" />
+                </RelativeLayout>
+
+
+                <include layout="@layout/line_complete"></include>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtRate"
+                        style="@style/grey_normal_14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:drawableLeft="@drawable/rupes_detail"
+                        android:drawablePadding="10dp"
+                        android:padding="15dp"
+                        android:text="" />
+                </RelativeLayout>
+
+                <include layout="@layout/line_complete"></include>
+
+                <RelativeLayout
+                    android:id="@+id/llMap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtAddressDetails"
+                        style="@style/grey_normal_14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:drawableLeft="@drawable/location_detail"
+                        android:drawablePadding="10dp"
+                        android:ems="20"
+                        android:padding="15dp"
+                        android:text="" />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/arrow" />
+
+                </RelativeLayout>
+
+
+
+                <include layout="@layout/line_complete"></include>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llAppointment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/radioOption"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:paddingLeft="7dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/radioOption0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/new_post_icon"
+                                android:gravity="center_vertical"
+                                android:textColor="#000000"
+                                android:text="  Clinic Name" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llCountryCode"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/spClinicName"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:paddingRight="5dp"
+                                android:prompt="@string/app_name" />
+
+                            <include layout="@layout/line_complete"></include>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="7dp"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:id="@+id/radioOption1" android:textColor="#000000"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/new_post_icon"
+                                android:gravity="center_vertical"
+                                android:text="  Appointment Date" />
+
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:onClick="showDatePickerDialog"
+                                android:orientation="vertical"
+                                android:paddingLeft="25dp"
+                                android:paddingRight="20dp"
+                                android:paddingTop="2dp">
+
+                                <TextView
+                                    android:id="@+id/txtFirstDateTime"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/dropdown"
+                                    android:paddingBottom="5dp"
+                                    android:paddingTop="5dp"
+
+                                    android:text="Please select date"
+                                    style="@style/grey_normal_14dp" />
+
+
+                            </LinearLayout>
+
+                            <include layout="@layout/line_complete"></include>
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="7dp"
+                                android:paddingTop="10dp">
+
+                                <TextView
+                                    android:id="@+id/radioOption2"
+                                    android:layout_width="wrap_content" android:textColor="#000000"
+                                    android:layout_height="wrap_content"
+                                    android:drawableLeft="@drawable/new_post_icon"
+                                    android:gravity="center_vertical"
+                                    android:text="  Appointment Time" />
+
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llTime"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Spinner
+                                    android:id="@+id/spTime"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:paddingRight="20dp"
+                                    android:prompt="@string/app_name" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <!-- <TextView
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:drawableLeft="@drawable/recommended_detail"
+                     android:drawablePadding="5dp"
+                     android:padding="15dp"
+                     android:text="Book For"
+                     android:textColor="@color/txtGreyColor"
+                     android:textSize="14dp" />-->
+
+
+                <include layout="@layout/line_complete"></include>
+
+
+                <LinearLayout
+                    android:id="@+id/llbtnAppointment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/selector_btn_for_blue"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtBookAppointment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/book_appointment"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

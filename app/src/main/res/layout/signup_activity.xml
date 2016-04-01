@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llIncludeTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar_login" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/llIncludeTop">
+
+        <LinearLayout
+            android:id="@+id/llTop"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/llIncludeTop"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="30dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo" />
+            <!-- start Username -->
+
+
+            <LinearLayout
+                android:id="@+id/llName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.rey.material.widget.EditText
+                    android:id="@+id/edName"
+                    style="@style/Material.Widget.EditText.Light"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividere11"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/txtGreyColor" />
+
+            <LinearLayout
+                android:id="@+id/llNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.rey.material.widget.EditText
+                    android:id="@+id/edNumber"
+                    style="@style/Material.Widget.EditText.Light"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:hint="Contact Number"
+                    android:inputType="number"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividere12"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/txtGreyColor" />
+
+
+            <LinearLayout
+                android:id="@+id/llEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.rey.material.widget.EditText
+                    android:id="@+id/edEmail"
+                    style="@style/Material.Widget.EditText.Light"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:hint="Email ID"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divideresd"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/txtGreyColor" />
+
+            <LinearLayout
+                android:id="@+id/llPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.rey.material.widget.EditText
+                    android:id="@+id/edPassword"
+                    style="@style/Material.Widget.EditText.Light"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividersesd"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/txtGreyColor" />
+
+            <LinearLayout
+                android:id="@+id/llConPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.rey.material.widget.EditText
+                    android:id="@+id/edConPassword"
+                    style="@style/Material.Widget.EditText.Light"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividered"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/txtGreyColor" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="I AM"
+                android:textColor="@color/txtGreyColor" />
+
+
+            <com.exigency.exigencycare.util.SelectedLinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="visible"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/llFirst"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/activity_tab_background">
+
+                    <TextView
+                        android:id="@+id/txtChef"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+
+                        android:text="PATIENT"
+                        android:textColor="@android:color/white"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSecond"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/activity_tab_background">
+
+                    <TextView
+                        android:id="@+id/txtPlace"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="SPECIALIST"
+                        android:textColor="@android:color/white"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+
+            </com.exigency.exigencycare.util.SelectedLinearLayout>
+
+
+            <!-- End Password -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="15dp"
+                android:background="@android:color/transparent" />
+
+            <!-- Start Sign in -->
+
+            <LinearLayout
+                android:id="@+id/llRegister"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selector_btn_for_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/txtlogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="REGISTER"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!-- End Sign in -->
+            <!-- End Sign in -->
+
+
+            <!-- Start Facebook -->
+
+
+            <!-- End Sign in -->
+
+
+            <!-- Start Facebook -->
+
+            <LinearLayout
+                android:id="@+id/llNewHere"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtFirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="By signing in you agree to this legal things"
+                    android:textColor="@color/txtGreyColor"
+                    android:textSize="10dp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtTS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TERMS OF SERVICES"
+                        android:textColor="@color/txtGreyColor"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/txtAND"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" and "
+                        android:textColor="@color/txtGreyColor"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/txtPP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRIVACY POLICY"
+                        android:textColor="@color/txtGreyColor"
+                        android:textSize="10dp"
+                        android:paddingBottom="10dp"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!-- End Sign in -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
